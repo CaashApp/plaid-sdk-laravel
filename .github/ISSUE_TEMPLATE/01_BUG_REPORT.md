@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help Plaid SDK for Laravel to improve
+about: Create a report to help Plaid sdk for Laravel to improve
 title: "bug: "
 labels: "bug"
 assignees: ""
@@ -8,7 +8,7 @@ assignees: ""
 
 # Bug Report
 
-**Plaid SDK for Laravel version:**
+**Plaid sdk for Laravel version:**
 
 <!-- Please specify commit or tag version. -->
 

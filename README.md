@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://github.com/caashapp/plaid-sdk-laravel">
-    <img src="docs/images/logo.svg" alt="Plaid SDK for Laravel" height="130">
+    <img src="docs/images/logo.svg" alt="Plaid sdk for Laravel" height="130">
   </a>
 </div>
 
@@ -28,11 +28,12 @@
 <details open="open">
 <summary>Table of Contents</summary>
 
-- [About](#about)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+- [Introduction](#introduction)
+- [Installation & Setup](#installation--setup)
+  - [Configuration](#configuration)
 - [Usage](#usage)
+  - [Structured Responses](#structured-responses)
+  - [Sandbox Environment](#sandbox-environment)
 - [Roadmap](#roadmap)
 - [Support](#support)
 - [Project assistance](#project-assistance)
@@ -40,40 +41,108 @@
 - [Authors & contributors](#authors--contributors)
 - [Security](#security)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 </details>
 
 ---
 
-## About
+## Introduction
 
-> **[?]**
-> Provide general information about your project here.
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> Why did you undertake it?
-> You don't have to answer all the questions -- just the ones relevant to your project.
+Plaid sdk for Laravel is built to make harnessing the power of Plaid into your Laravel 
+application as simple as possible. The library maps the Plaid API into a series of methods
+all bundled into a convenient Facade for rapid development and easy testing. Each method 
+returns a structured object, so you don't need to go hunting through documentation, just let
+code completion guide you through. 
 
-## Getting Started
+#### Inspriation
 
-### Prerequisites
+Plaid sdk for Laravel is inspired by [TomorrowIdeas/plaid-sdk-php](https://github.com/TomorrowIdeas/plaid-sdk-php)
+which I started using in a project, but found it wasn't well integrated with Laravel, and I 
+thought I could do something better. If you just need a PHP implementation of the Plaid API, 
+go check it out. 
 
-> **[?]**
-> What are the project requirements/dependencies?
+## Installation & Setup
 
-### Installation
+Require this package with composer. Laravel uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
 
-> **[?]**
-> Describe how to install and get started with the project.
+```shell
+composer require caashapp/plaid-sdk-laravel
+```
+
+### Configuration
+
+The defaults are set in `config/plaid.php`. Copy this file to your own config directory 
+to modify the values. You can publish the config using this command:
+
+```shell
+php artisan vendor:publish --provider="CaashApp\Plaid\PlaidServiceProvider"
+```
+
+Before using Plaid sdk for Laravel, you will also need to add credentials for the 
+Plaid service and set the environment. These credentials should be placed in your 
+.env file, which will then be mapped into the `config\plaid.php` file. 
+
+```dotenv
+PLAID_ENV=sandbox
+PLAID_CLIENT_ID=
+PLAID_SECRET=
+```
+
+the `config/plaid.php` file also contains the configuration for the list of products
+you want to use, the countries your app should pull institutions from and the 
+default language. The default configuration should be good to go for testing in
+the sandbox environment but be sure to review these settings, and the Plaid API 
+documentation prior to moving your application to production. 
 
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+You may interact with the Plaid AIP using the Plaid facade. 
+
+```php
+use CaashApp\Plaid\Facades\Plaid;
+
+Plaid::createLinkToken(string $userId, array $options = [])
+Plaid::updateLinkToken(string $userId, string $accessToken, array $options = [])
+Plaid::exchangePublicToken(string $publicToken)
+Plaid::getItem(string $accessToken)
+Plaid::updateWebhook(string $accessToken, string $webhook)
+Plaid::removeItem(string $accessToken)
+Plaid::listInstitutions(int $count, int $offset, array $options = [])
+Plaid::getInstitution(string $institutionId, array $options = [])
+Plaid::searchInstitutions(string $query, array $options = [])
+Plaid::getAccount(string $accessToken)
+Plaid::rotateAccessToken(string $accessToken)
+```
+
+### Structured Responses
+
+Each method returns a complex object, containing a fully typed and annotated structure. So if you
+use an IDE that provides code completion, you'll spend a lot less time hunting through documentation
+for the properties you want.
+
+<img src="docs/images/code-completion.png" alt="code completion in action" height="150">
+
+### Sandbox Environment
+
+When in the sandbox environment, Plaid provides a few extra helper API which are also exposed via
+the Plaid facade
+
+```php
+use CaashApp\Plaid\Facades\Plaid;
+
+Plaid::createPublicToken(string $institutionId, array $options = null)
+Plaid::resetItemLogin(string $accessToken)
+Plaid::fireWebhook(string $accessToken, string $webhookCode = 'DEFAULT_UPDATE')
+Plaid::createTestItem(string $institution)
+```
 
 ## Roadmap
+
+This library is not complete, many of Plaids products are not yet implemented. You can create links, 
+get bank accounts, balances and transactions today. More will be added to the library and pushed out
+as a complete product category at once. 
+
+The priority for now is transactions and balances, including a full test suit. 
 
 See the [open issues](https://github.com/caashapp/plaid-sdk-laravel/issues) for a list of proposed features (and known issues).
 
@@ -83,9 +152,6 @@ See the [open issues](https://github.com/caashapp/plaid-sdk-laravel/issues) for 
 
 ## Support
 
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
-
 Reach out to the maintainer at one of the following places:
 
 - [GitHub Discussions](https://github.com/caashapp/plaid-sdk-laravel/discussions)
@@ -93,13 +159,13 @@ Reach out to the maintainer at one of the following places:
 
 ## Project assistance
 
-If you want to say **thank you** or/and support active development of Plaid SDK for Laravel:
+If you want to say **thank you** or/and support active development of Plaid sdk for Laravel:
 
 - Add a [GitHub Star](https://github.com/caashapp/plaid-sdk-laravel) to the project.
-- Tweet about the Plaid SDK for Laravel.
+- Tweet about the Plaid sdk for Laravel.
 - Write interesting articles about the project on [Dev.to](https://dev.to/), [Medium](https://medium.com/) or your personal blog.
 
-Together, we can make Plaid SDK for Laravel **better**!
+Together, we can make Plaid sdk for Laravel **better**!
 
 ## Contributing
 
@@ -116,8 +182,8 @@ For a full list of all authors and contributors, see [the contributors page](htt
 
 ## Security
 
-Plaid SDK for Laravel follows good practices of security, but 100% security cannot be assured.
-Plaid SDK for Laravel is provided **"as is"** without any **warranty**. Use at your own risk.
+Plaid sdk for Laravel follows good practices of security, but 100% security cannot be assured.
+Plaid sdk for Laravel is provided **"as is"** without any **warranty**. Use at your own risk.
 
 _For more information and to report security issues, please refer to our [security documentation](docs/SECURITY.md)._
 
@@ -126,11 +192,3 @@ _For more information and to report security issues, please refer to our [securi
 This project is licensed under the **MIT license**.
 
 See [LICENSE](LICENSE) for more information.
-
-## Acknowledgements
-
-<a href="https://www.flaticon.com/free-icons/geometric" title="geometric icons">Geometric icons created by Freepik - Flaticon</a>
-
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.

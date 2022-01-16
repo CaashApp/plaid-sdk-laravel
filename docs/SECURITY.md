@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If there are any vulnerabilities in **Plaid SDK for Laravel**, don't hesitate to _report them_.
+If there are any vulnerabilities in **Plaid sdk for Laravel**, don't hesitate to _report them_.
 
 1. Use any of the [private contact addresses](https://github.com/caashapp/plaid-sdk-laravel#support).
 2. Describe the vulnerability.
