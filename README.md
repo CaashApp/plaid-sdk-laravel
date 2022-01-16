@@ -26,6 +26,9 @@
         <img src="https://img.shields.io/badge/PRs-welcome-ff69b4.svg" alt="Total Downloads">
     </a>
     <a href="https://packagist.org/packages/caashapp/plaid-sdk-laravel">
+        <img src="https://img.shields.io/packagist/php-v/caashapp/plaid-sdk-laravel" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/caashapp/plaid-sdk-laravel">
         <img src="https://img.shields.io/packagist/v/caashapp/plaid-sdk-laravel" alt="Latest Stable Version">
     </a>
     <a href="https://packagist.org/packages/caashapp/plaid-sdk-laravel">
