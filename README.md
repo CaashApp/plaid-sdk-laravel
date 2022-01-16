@@ -120,8 +120,6 @@ Each method returns a complex object, containing a fully typed and annotated str
 use an IDE that provides code completion, you'll spend a lot less time hunting through documentation
 for the properties you want.
 
-<img src="docs/images/code-completion.png" alt="code completion in action" height="150">
-
 ### Sandbox Environment
 
 When in the sandbox environment, Plaid provides a few extra helper API which are also exposed via
