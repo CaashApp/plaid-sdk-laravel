@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/caashapp/plaid-sdk-laravel">
-    <img src="docs/images/logo.svg" alt="Logo" width="100" height="100">
+    <img src="docs/images/logo.svg" alt="Logo" width="486" height="260">
   </a>
 </h1>
 
