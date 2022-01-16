@@ -49,7 +49,7 @@ class Factory
     ) {
         $this->hostname = $this->plaidEnvironments[$this->environment];
         $this->products = config('plaid.products');
-        $this->countryCodes = config('plaid.country-codes');
+        $this->countryCodes = config('plaid.country_codes');
         $this->language = config('plaid.language');
 
         $this->headers = [

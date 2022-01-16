@@ -46,6 +46,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Default Webhook URL
+    |--------------------------------------------------------------------------
+    |
+    | The destination URL to which any webhooks should be sent. This is sent
+    | to Plaid when creating a link token. To change an existing webhook
+    | use the changeWebhook() method on the Plaid facade.
+    |
+    */
+
+    'webhook' => url('webhook'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Products
     |--------------------------------------------------------------------------
     |
@@ -90,7 +103,7 @@ return [
     |
     */
 
-    'country-codes' => ['US', 'GB'],
+    'country_codes' => ['US', 'GB'],
 
     /*
     |--------------------------------------------------------------------------
