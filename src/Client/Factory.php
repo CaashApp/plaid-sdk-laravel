@@ -39,6 +39,8 @@ class Factory
 
     protected string $language;
 
+    protected string $webhook;
+
     protected array $countryCodes;
 
     public function __construct(
@@ -51,6 +53,7 @@ class Factory
         $this->products = config('plaid.products');
         $this->countryCodes = config('plaid.country_codes');
         $this->language = config('plaid.language');
+        $this->webhook = config('plaid.webhook');
 
         $this->headers = [
             'Plaid-Version' => self::API_VERSION,
@@ -257,6 +260,7 @@ class Factory
             'country_codes' => $this->countryCodes,
             'user' => ['client_user_id' => $userId],
             'products' => $this->products,
+            'webhook' => $this->webhook,
         ], $options))->json());
     }
 
