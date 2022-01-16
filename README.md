@@ -1,29 +1,37 @@
-<br />
-
-<div align="center">
+<p align="center">
   <a href="https://github.com/caashapp/plaid-sdk-laravel">
     <img src="docs/images/logo.svg" alt="Plaid sdk for Laravel" height="130">
   </a>
-</div>
+</p>
 
-<div align="center">
+<p align="center">
     <br />
-    <a href="https://github.com/caashapp/plaid-sdk-laravel/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
+    <a href="https://github.com/caashapp/plaid-sdk-laravel/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">
+        Report a Bug
+    </a>
     ·
-    <a href="https://github.com/caashapp/plaid-sdk-laravel/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
+    <a href="https://github.com/caashapp/plaid-sdk-laravel/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">
+        Request a Feature
+    </a>
     ·
-    <a href="https://github.com/caashapp/plaid-sdk-laravel/discussions">Ask a Question</a>
-</div>
+    <a href="https://github.com/caashapp/plaid-sdk-laravel/discussions">
+        Ask a Question
+    </a>
+</p>
 
 <br />
 
-<div align="center">
-
-[![Project license](https://img.shields.io/github/license/caashapp/plaid-sdk-laravel.svg?style=flat-square)](LICENSE)
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/caashapp/plaid-sdk-laravel/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-[![code with love by caashapp](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-caashapp-ff1414.svg?style=flat-square)](https://github.com/caashapp)
-
-</div>
+<p align="center">
+    <a href="https://packagist.org/packages/caashapp/plaid-sdk-laravel/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">
+        <img src="https://img.shields.io/badge/PRs-welcome-ff69b4.svg" alt="Total Downloads">
+    </a>
+    <a href="https://packagist.org/packages/caashapp/plaid-sdk-laravel">
+        <img src="https://img.shields.io/packagist/v/caashapp/plaid-sdk-laravel" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/caashapp/plaid-sdk-laravel">
+        <img src="https://img.shields.io/packagist/l/caashapp/plaid-sdk-laravel" alt="License">
+    </a>
+</p>
 
 <details open="open">
 <summary>Table of Contents</summary>
