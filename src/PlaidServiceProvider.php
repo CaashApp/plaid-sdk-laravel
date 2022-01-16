@@ -23,4 +23,16 @@ class PlaidServiceProvider extends ServiceProvider
             );
         });
     }
+
+    /**
+     * Bootstrap any package services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__.'/../config/plaid.php' => config_path('plaid.php'),
+        ]);
+    }
 }
