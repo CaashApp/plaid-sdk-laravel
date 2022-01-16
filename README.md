@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/caashapp/plaid-sdk-laravel">
-    <img src="docs/images/logo.svg" alt="Logo" width="486" height="260">
+    <img src="docs/images/logo.svg" alt="Logo" width="356">
   </a>
 </h1>
 
@@ -88,7 +88,7 @@ See the [open issues](https://github.com/caashapp/plaid-sdk-laravel/issues) for 
 Reach out to the maintainer at one of the following places:
 
 - [GitHub Discussions](https://github.com/caashapp/plaid-sdk-laravel/discussions)
-- Contact options listed on [this GitHub profile](https://github.com/idnemnity83)
+- Contact options listed on [this GitHub profile](https://github.com/indemnity83)
 
 ## Project assistance
 
@@ -109,7 +109,7 @@ Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you f
 
 ## Authors & contributors
 
-The original setup of this repository is by [Kyle Klaus](https://github.com/caashapp).
+The original setup of this repository is by [Kyle Klaus](https://github.com/indemnity83).
 
 For a full list of all authors and contributors, see [the contributors page](https://github.com/caashapp/plaid-sdk-laravel/contributors).
 
@@ -127,6 +127,8 @@ This project is licensed under the **MIT license**.
 See [LICENSE](LICENSE) for more information.
 
 ## Acknowledgements
+
+<a href="https://www.flaticon.com/free-icons/geometric" title="geometric icons">Geometric icons created by Freepik - Flaticon</a>
 
 > **[?]**
 > If your work was funded by any organization or institution, acknowledge their support here.
