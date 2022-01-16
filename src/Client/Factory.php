@@ -203,17 +203,17 @@ class Factory
      *
      * @param string $query
      * @param array $options
-     * @return InstitutionSearchResource
+     * @return InstitutionCollectionResource
      * @throws RequestException
      * @throws UnknownProperties
      */
-    public function searchInstitutions(string $query, array $options = []): InstitutionSearchResource
+    public function searchInstitutions(string $query, array $options = []): InstitutionCollectionResource
     {
         $options = array_merge([
             'include_optional_metadata' => true,
         ], $options);
 
-        return new InstitutionSearchResource($this->sendRequest('institutions/search', [
+        return new InstitutionCollectionResource($this->sendRequest('institutions/search', [
             'query' => $query,
             'country_codes' => $this->countryCodes,
             'products' => $this->products,
