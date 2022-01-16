@@ -1,9 +1,9 @@
 <?php
 
-namespace Indemnity83\Plaid\Resources;
+namespace CaashApp\Plaid\Resources;
 
-use Indemnity83\Plaid\Entities\Item;
-use Indemnity83\Plaid\Entities\PlaidStatus;
+use CaashApp\Plaid\Entities\Item;
+use CaashApp\Plaid\Entities\PlaidStatus;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class ItemResource extends DataTransferObject

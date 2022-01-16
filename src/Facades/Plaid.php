@@ -1,18 +1,18 @@
 <?php
 
-namespace Indemnity83\Plaid\Facades;
+namespace CaashApp\Plaid\Facades;
 
-use Indemnity83\Plaid\Resources\AccessTokenResource;
-use Indemnity83\Plaid\Resources\AccountResource;
-use Indemnity83\Plaid\Resources\InstitutionCollectionResource;
-use Indemnity83\Plaid\Resources\InstitutionResource;
-use Indemnity83\Plaid\Resources\ItemRemoveResource;
-use Indemnity83\Plaid\Resources\ItemResource;
-use Indemnity83\Plaid\Resources\LinkTokenResource;
-use Indemnity83\Plaid\Resources\NewAccessTokenResource;
-use Indemnity83\Plaid\Resources\PublicTokenResource;
-use Indemnity83\Plaid\Resources\ResetItemResource;
-use Indemnity83\Plaid\Resources\WebhookFiredResource;
+use CaashApp\Plaid\Resources\AccessTokenResource;
+use CaashApp\Plaid\Resources\AccountResource;
+use CaashApp\Plaid\Resources\InstitutionCollectionResource;
+use CaashApp\Plaid\Resources\InstitutionResource;
+use CaashApp\Plaid\Resources\ItemRemoveResource;
+use CaashApp\Plaid\Resources\ItemResource;
+use CaashApp\Plaid\Resources\LinkTokenResource;
+use CaashApp\Plaid\Resources\NewAccessTokenResource;
+use CaashApp\Plaid\Resources\PublicTokenResource;
+use CaashApp\Plaid\Resources\ResetItemResource;
+use CaashApp\Plaid\Resources\WebhookFiredResource;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static WebhookFiredResource fireWebhook(string $accessToken, string $webhookCode = 'DEFAULT_UPDATE')
  * @method static AccessTokenResource createTestItem(string $institution)
  *
- * @see \Indemnity83\Plaid\Client\Factory
+ * @see \CaashApp\Plaid\Client\Factory
  */
 class Plaid extends Facade
 {

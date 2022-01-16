@@ -1,6 +1,6 @@
 <?php
 
-namespace Indemnity83\Plaid\Resources;
+namespace CaashApp\Plaid\Resources;
 
 use Spatie\DataTransferObject\DataTransferObject;
 

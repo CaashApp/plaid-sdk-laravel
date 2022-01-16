@@ -1,22 +1,39 @@
 {
-    "name": "indemnity83/plaid-sdk-laravel",
+    "name": "caashapp/plaid-sdk-laravel",
     "description": "Laravel implementation of Plaid's API as an SDK.",
-    "type": "library",
-    "require": {
-        "php": "^8.0",
-        "spatie/data-transfer-object": "^3.7",
-        "illuminate/http": "^8.79"
-    },
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Indemnity83\\Plaid\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Kyle Klaus",
             "email": "kklaus@indemnity83.com"
         }
-    ]
+    ],
+    "require": {
+        "php": "^8.1",
+        "spatie/data-transfer-object": "^3.7",
+        "illuminate/http": "^8.79",
+        "illuminate/support": "^8.79"
+    },
+    "autoload": {
+        "psr-4": {
+            "CaashApp\\Plaid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CaashApp\\Plaid\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CaashApp\\Plaid\\PlaidServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

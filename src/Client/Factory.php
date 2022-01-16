@@ -1,19 +1,19 @@
 <?php
 
-namespace Indemnity83\Plaid\Client;
+namespace CaashApp\Plaid\Client;
 
-use Indemnity83\Plaid\Resources\AccessTokenResource;
-use Indemnity83\Plaid\Resources\AccountResource;
-use Indemnity83\Plaid\Resources\InstitutionCollectionResource;
-use Indemnity83\Plaid\Resources\InstitutionResource;
-use Indemnity83\Plaid\Resources\InstitutionSearchResource;
-use Indemnity83\Plaid\Resources\ItemRemoveResource;
-use Indemnity83\Plaid\Resources\ItemResource;
-use Indemnity83\Plaid\Resources\LinkTokenResource;
-use Indemnity83\Plaid\Resources\NewAccessTokenResource;
-use Indemnity83\Plaid\Resources\PublicTokenResource;
-use Indemnity83\Plaid\Resources\ResetItemResource;
-use Indemnity83\Plaid\Resources\WebhookFiredResource;
+use CaashApp\Plaid\Resources\AccessTokenResource;
+use CaashApp\Plaid\Resources\AccountResource;
+use CaashApp\Plaid\Resources\InstitutionCollectionResource;
+use CaashApp\Plaid\Resources\InstitutionResource;
+use CaashApp\Plaid\Resources\InstitutionSearchResource;
+use CaashApp\Plaid\Resources\ItemRemoveResource;
+use CaashApp\Plaid\Resources\ItemResource;
+use CaashApp\Plaid\Resources\LinkTokenResource;
+use CaashApp\Plaid\Resources\NewAccessTokenResource;
+use CaashApp\Plaid\Resources\PublicTokenResource;
+use CaashApp\Plaid\Resources\ResetItemResource;
+use CaashApp\Plaid\Resources\WebhookFiredResource;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;

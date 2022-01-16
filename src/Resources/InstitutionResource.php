@@ -1,8 +1,8 @@
 <?php
 
-namespace Indemnity83\Plaid\Resources;
+namespace CaashApp\Plaid\Resources;
 
-use Indemnity83\Plaid\Entities\Institution;
+use CaashApp\Plaid\Entities\Institution;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class InstitutionResource extends DataTransferObject

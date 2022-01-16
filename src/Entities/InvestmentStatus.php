@@ -1,8 +1,8 @@
 <?php
 
-namespace Indemnity83\Plaid\Entities;
+namespace CaashApp\Plaid\Entities;
 
-use Indemnity83\Plaid\Casters\DateTimeCaster;
+use CaashApp\Plaid\Casters\DateTimeCaster;
 use DateTime;
 use Spatie\DataTransferObject\Attributes\DefaultCast;
 use Spatie\DataTransferObject\DataTransferObject;

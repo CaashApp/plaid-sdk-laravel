@@ -1,6 +1,6 @@
 <?php
 
-namespace Indemnity83\Plaid\Entities;
+namespace CaashApp\Plaid\Entities;
 
 use DateTime;
 use Spatie\DataTransferObject\DataTransferObject;

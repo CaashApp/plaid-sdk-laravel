@@ -1,6 +1,6 @@
 <?php
 
-namespace Indemnity83\Plaid\Casters;
+namespace CaashApp\Plaid\Casters;
 
 use DateTime;
 use Exception;
