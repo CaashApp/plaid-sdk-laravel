@@ -37,7 +37,7 @@ class Factory
 
     public function __construct(
         protected string $clientId,
-        protected string $clientSecret,
+        protected string $secret,
         protected string $environment,
         protected string $clientName,
         protected array $products = ['transactions'],
@@ -48,8 +48,8 @@ class Factory
 
         $this->headers = [
             'Plaid-Version' => self::API_VERSION,
-            'PLAID-CLIENT-ID' => config('services.plaid.client'),
-            'PLAID-SECRET' => config('services.plaid.secret'),
+            'PLAID-CLIENT-ID' => $this->clientId,
+            'PLAID-SECRET' => $this->secret,
             'Content-Type' => 'application/json',
         ];
     }
