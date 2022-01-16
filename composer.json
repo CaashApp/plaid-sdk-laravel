@@ -1,0 +1,22 @@
+{
+    "name": "indemnity83/plaid-sdk-laravel",
+    "description": "Laravel implementation of Plaid's API as an SDK.",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "spatie/data-transfer-object": "^3.7",
+        "illuminate/http": "^8.79"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Indemnity83\\Plaid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kyle Klaus",
+            "email": "kklaus@indemnity83.com"
+        }
+    ]
+}
