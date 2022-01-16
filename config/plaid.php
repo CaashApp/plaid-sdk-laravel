@@ -44,4 +44,68 @@ return [
 
     'secret' => env('PLAID_SECRET'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Products
+    |--------------------------------------------------------------------------
+    |
+    | List of Plaid product(s) you wish to use. Valid products are:
+    |
+    | transactions, auth, identity, assets, investments, liabilities,
+    | payment_initiation, deposit_switch, income_verification, transfer,
+    | employment
+    |
+    | In Production, you will be billed for each product that you specify
+    | when initializing Link. Note that a product cannot be removed from
+    | an item once the item has been initialized with that product. To
+    | stop billing on items for subscription-based products, such as
+    | Liabilities, Investments, and Transactions, remove the Item.
+    |
+    */
+
+    'products' => [
+        'transactions',
+        'auth',
+        'identity',
+        'assets',
+        'investments',
+        'liabilities',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Country Codes
+    |--------------------------------------------------------------------------
+    |
+    | Specify an array of country codes using the ISO-3166-1 alpha-2 country
+    | code standard. Institutions from all listed countries will be shown.
+    |
+    | Supported country codes are: US, CA, DE, ES, FR, GB, IE, NL
+    |
+    | All country codes are enabled for your account by default in Sandbox
+    | and Development. But in Production, only US and Canada are enabled
+    | at the account level by default. To gain access to institutions
+    | in European countries in the Production environment, file an
+    | access Support ticket via the Plaid dashboard
+    |
+    */
+
+    'country-codes' => ['US', 'GB'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Language
+    |--------------------------------------------------------------------------
+    |
+    | The language that Link should be displayed in. Supported languages are:
+    |
+    | English ('en'), French ('fr'), Spanish ('es'), Dutch ('nl'),
+    | German('de')
+    |
+    | When using Link customization, the language configured here must match
+    | the setting in the customization, or the customization will not be
+    | applied.
+    */
+
+    'language' => config('app.locale'),
 ];

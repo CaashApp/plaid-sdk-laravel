@@ -35,16 +35,22 @@ class Factory
 
     protected array $headers;
 
+    protected array $products;
+
+    protected string $language;
+
+    protected array $countryCodes;
+
     public function __construct(
         protected string $clientId,
         protected string $secret,
         protected string $environment,
-        protected string $clientName,
-        protected array $products = ['transactions'],
-        protected string $language = 'en',
-        protected array $countryCodes = ['US']
+        protected string $clientName
     ) {
         $this->hostname = $this->plaidEnvironments[$this->environment];
+        $this->products = config('plaid.products');
+        $this->countryCodes = config('plaid.country-codes');
+        $this->language = config('plaid.language');
 
         $this->headers = [
             'Plaid-Version' => self::API_VERSION,
