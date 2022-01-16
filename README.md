@@ -1,11 +1,12 @@
-<h1 align="center">
-  <a href="https://github.com/caashapp/plaid-sdk-laravel">
-    <img src="docs/images/logo.svg" alt="Logo" width="356">
-  </a>
-</h1>
+<br />
 
 <div align="center">
-    Plaid SDK for Laravel
+  <a href="https://github.com/caashapp/plaid-sdk-laravel">
+    <img src="docs/images/logo.svg" alt="Plaid SDK for Laravel" height="130">
+  </a>
+</div>
+
+<div align="center">
     <br />
     <a href="https://github.com/caashapp/plaid-sdk-laravel/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
     ·
