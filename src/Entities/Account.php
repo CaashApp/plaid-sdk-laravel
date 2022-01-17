@@ -20,5 +20,5 @@ class Account extends DataTransferObject
 
     public ?string $subtype;
 
-    public string $verification_status;
+    public ?string $verification_status;
 }

@@ -3,7 +3,7 @@
 namespace CaashApp\Plaid\Facades;
 
 use CaashApp\Plaid\Resources\AccessTokenResource;
-use CaashApp\Plaid\Resources\AccountResource;
+use CaashApp\Plaid\Resources\AccountsResource;
 use CaashApp\Plaid\Resources\InstitutionCollectionResource;
 use CaashApp\Plaid\Resources\InstitutionResource;
 use CaashApp\Plaid\Resources\ItemRemoveResource;
@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static InstitutionCollectionResource listInstitutions(int $count, int $offset, array $options = [])
  * @method static InstitutionResource getInstitution(string $institutionId, array $options = [])
  * @method static InstitutionResource searchInstitutions(string $query, array $options = [])
- * @method static AccountResource getAccount(string $accessToken)
+ * @method static AccountsResource getAccounts(string $accessToken)
  * @method static NewAccessTokenResource rotateAccessToken(string $accessToken)
  * @method static PublicTokenResource createPublicToken(string $institutionId, array $options = null)
  * @method static ResetItemResource resetItemLogin(string $accessToken)

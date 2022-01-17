@@ -3,10 +3,9 @@
 namespace CaashApp\Plaid\Client;
 
 use CaashApp\Plaid\Resources\AccessTokenResource;
-use CaashApp\Plaid\Resources\AccountResource;
+use CaashApp\Plaid\Resources\AccountsResource;
 use CaashApp\Plaid\Resources\InstitutionCollectionResource;
 use CaashApp\Plaid\Resources\InstitutionResource;
-use CaashApp\Plaid\Resources\InstitutionSearchResource;
 use CaashApp\Plaid\Resources\ItemRemoveResource;
 use CaashApp\Plaid\Resources\ItemResource;
 use CaashApp\Plaid\Resources\LinkTokenResource;
@@ -230,13 +229,13 @@ class Factory
      * @link https://plaid.com/docs/api/accounts/#accountsget
      *
      * @param string $accessToken
-     * @return AccountResource
+     * @return AccountsResource
      * @throws RequestException
      * @throws UnknownProperties
      */
-    public function getAccount(string $accessToken): AccountResource
+    public function getAccounts(string $accessToken): AccountsResource
     {
-        return new AccountResource($this->sendRequest('accounts/get', [
+        return new AccountsResource($this->sendRequest('accounts/get', [
             'access_token' => $accessToken,
         ])->json());
     }
