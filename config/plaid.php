@@ -46,16 +46,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Webhook URL
+    | Default Webhook
     |--------------------------------------------------------------------------
     |
-    | The destination URL to which any webhooks should be sent. This is sent
-    | to Plaid when creating a link token. To change an existing webhook
-    | use the changeWebhook() method on the Plaid facade.
+    | The destination to which any webhooks should be sent. This is sent to
+    | Plaid when creating a link token. To change an existing webhooks use
+    | the changeWebhook() method on the Plaid facade.
     |
     */
 
-    'webhook' => url('webhook'),
+    'webhook' => '/webhooks',
 
     /*
     |--------------------------------------------------------------------------

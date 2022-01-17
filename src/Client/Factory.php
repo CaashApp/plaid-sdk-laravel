@@ -53,7 +53,7 @@ class Factory
         $this->products = config('plaid.products');
         $this->countryCodes = config('plaid.country_codes');
         $this->language = config('plaid.language');
-        $this->webhook = config('plaid.webhook');
+        $this->webhook = url(config('plaid.webhook'));
 
         $this->headers = [
             'Plaid-Version' => self::API_VERSION,
