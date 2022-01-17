@@ -2,12 +2,15 @@
 
 namespace CaashApp\Plaid\Entities;
 
+use CaashApp\Plaid\Casters\BalanceCaster;
+use Spatie\DataTransferObject\Attributes\CastWith;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class Account extends DataTransferObject
 {
     public string $account_id;
 
+    #[CastWith(BalanceCaster::class)]
     public Balances $balances;
 
     public ?string $mask;
