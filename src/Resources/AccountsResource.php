@@ -11,7 +11,7 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class AccountsResource extends DataTransferObject
 {
-    /** @var Account[] */
+    /** @var Collection<Account> */
     #[CastWith(AccountCollectionCaster::class)]
     public Collection $accounts;
 
