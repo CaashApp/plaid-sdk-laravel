@@ -12,7 +12,9 @@ use CaashApp\Plaid\Resources\LinkTokenResource;
 use CaashApp\Plaid\Resources\NewAccessTokenResource;
 use CaashApp\Plaid\Resources\PublicTokenResource;
 use CaashApp\Plaid\Resources\ResetItemResource;
+use CaashApp\Plaid\Resources\TransactionsResource;
 use CaashApp\Plaid\Resources\WebhookFiredResource;
+use DateTime;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -31,6 +33,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static ResetItemResource resetItemLogin(string $accessToken)
  * @method static WebhookFiredResource fireWebhook(string $accessToken, string $webhookCode = 'DEFAULT_UPDATE')
  * @method static AccessTokenResource createTestItem(string $institution)
+ * @method static TransactionsResource fetchTransactions(string $itemId, DateTime $startDate, DateTime $endDate);
  *
  * @see \CaashApp\Plaid\Client\Factory
  */

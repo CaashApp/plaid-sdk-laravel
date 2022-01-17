@@ -12,10 +12,13 @@ use CaashApp\Plaid\Resources\LinkTokenResource;
 use CaashApp\Plaid\Resources\NewAccessTokenResource;
 use CaashApp\Plaid\Resources\PublicTokenResource;
 use CaashApp\Plaid\Resources\ResetItemResource;
+use CaashApp\Plaid\Resources\TransactionsResource;
 use CaashApp\Plaid\Resources\WebhookFiredResource;
+use DateTime;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use InvalidArgumentException;
 use RuntimeException;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;
@@ -324,6 +327,58 @@ class Factory
         return new NewAccessTokenResource($this->sendRequest('item/access_token/invalidate', [
             'access_token' => $accessToken,
         ])->json());
+    }
+
+    /**
+     * Fetch transactions between two dates.
+     *
+     * @param string $accessToken
+     * @param DateTime $startDate
+     * @param DateTime $endDate
+     * @return TransactionsResource
+     * @throws RequestException
+     * @throws UnknownProperties
+     */
+    public function fetchTransactions(string $accessToken, DateTime $startDate, DateTime $endDate): TransactionsResource
+    {
+        $offset = 0;
+        $count = 100;
+        $transactionsToFetch = true;
+
+        $item = [];
+        $accounts = [];
+        $transactions = [];
+
+        while ($transactionsToFetch) {
+            $body = [
+                'access_token' => $accessToken,
+                'start_date' => $startDate->format('Y-m-d'),
+                'end_date' => $endDate->format('Y-m-d'),
+                'options' => [
+                    'count' => $count,
+                    'offset' => $offset,
+                ],
+            ];
+
+            $response = $this->sendRequest('transactions/get', $body)->json();
+
+            $item = $response['item'];
+            $accounts = $response['accounts'];
+            $transactions = array_merge($transactions, $response['transactions']);
+
+            if (count($response['transactions']) !== $count) {
+                $transactionsToFetch = false;
+            }
+
+            $offset += $count;
+        }
+
+        return new TransactionsResource([
+            'item' => $item,
+            'accounts' => $accounts,
+            'transactions' => $transactions,
+            'total_transactions' => count($transactions),
+        ]);
     }
 
     /**
