@@ -283,6 +283,9 @@ class Factory
             'country_codes' => $this->countryCodes,
             'user' => ['client_user_id' => $userId],
             'access_token' => $accessToken,
+            'update' => [
+                'account_selection_enabled' => true,
+            ],
         ], $options))->json());
     }
 
