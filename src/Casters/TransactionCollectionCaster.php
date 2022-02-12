@@ -29,6 +29,6 @@ class TransactionCollectionCaster implements Caster
         $currencyCode = $value['iso_currency_code'] ?? $value['unofficial_currency_code'];
         $moneyParser = new DecimalMoneyParser(new ISOCurrencies());
 
-        return $moneyParser->parse($value[$key], new Currency($currencyCode));
+        return $moneyParser->parse((string) $value[$key], new Currency($currencyCode));
     }
 }
